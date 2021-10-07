@@ -15,7 +15,7 @@ A few key features demonstrated in the webapp:
 - Secure Chat over WebSocket
 - Ability to Create, Read, Update, and Delete info to MySQL Database
 
-# [Try the Demo](https://www.jaimegonzalezjr.com/Projects/crud/login.php)
+# [Try the Demo](https://www.jaimegonzalezjr.com/Projects/crud/login.php){:target="_blank"}
 ## Login Info
 ### Username: test
 ### Password: 123
