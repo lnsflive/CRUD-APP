@@ -11,10 +11,11 @@ A few key features demonstrated in the webapp:
 - Fully Functional and Secure Login, Register, Recover Password, Logout
 - Online Status
 - Collapsable Navbar
-- Responsive web browsing
-- Secure Chat over web sockets
-- [Try the Demo](https://www.jaimegonzalezjr.com/Projects/crud/login.php)
+- Responsive Web Browsing
+- Secure Chat over WebSocket
+- Ability to Create, Read, Update, and Delete info to MySQL Database
 
+# [Try the Demo](https://www.jaimegonzalezjr.com/Projects/crud/login.php)
 ## Login Info
 ### Username: test
 ### Password: 123
