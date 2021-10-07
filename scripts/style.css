@@ -1,0 +1,782 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: black;
+}
+.navpage-layout {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.navpage-header {
+  position: absolute;
+  min-width: 420px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  background-color: #303a46;
+  z-index: 3;
+}
+
+@media screen and (max-width: 530px) {
+  .user_name {
+    display: none;
+  }
+}
+#rotateBars {
+  transition: transform 0.6s ease;
+  will-change: transform;
+  opacity: 0.6;
+}
+#rotateBars:hover {
+  opacity: 1;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #303a46;
+  border: none;
+  min-height: initial;
+  min-width: 452px;
+}
+
+.navbar-icon {
+  display: block;
+  float: left;
+  padding: 7px 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.avatar {
+  vertical-align: middle;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+.navbar-footer span {
+  position: relative;
+  left: 15px;
+  color: white;
+}
+
+.navbar-footer .search-box {
+  display: inline-flex;
+  border-radius: 40px;
+  padding: 0px 10px;
+  background-color: #252c35;
+  padding: 5px;
+}
+.navbar-footer .search-box:hover > .search-txt {
+  width: 160px;
+  padding: 0 6px;
+}
+
+.navbar-footer .search-box:hover > .search-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.navbar-footer .search-btn {
+  color: red;
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border-radius: 50%;
+  background: #252c35;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.navbar-footer .search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0px;
+  padding: 5px 0;
+}
+.navbar-footer .onlineStatus {
+  display: inline-block;
+  right: -45px;
+  bottom: -10px;
+  position: relative;
+  background-color: greenyellow;
+  width: 10px;
+  height: 10px;
+  border-radius: 30px;
+  z-index: 9;
+}
+.changeStatus {
+  position: absolute;
+  top: 45px;
+  right: 100px;
+  display: none;
+  background-color: #303a46;
+  border-radius: 10px;
+  color: white;
+  border: 5px solid #3c4a59;
+  z-index: 4;
+}
+
+.changeSettings {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  background-color: #303a46;
+  border-radius: 10px;
+  color: white;
+  border: 5px solid #3c4a59;
+  z-index: 4;
+}
+
+.changeStatus li:nth-child(odd),
+.changeSettings li:nth-child(odd) {
+  background-color: #323f4e;
+}
+
+.changeStatus li a,
+.changeSettings li a {
+  padding: 20px 40px;
+}
+.changeStatus li:last-child,
+.changeSettings li:last-child {
+  border-radius: 0 0 10px 10px;
+}
+.changeStatus li:hover,
+.changeSettings li:hover {
+  background-color: #435465;
+}
+.changeStatus li:active,
+.changeSettings li:active {
+  background-color: #6a7c8f;
+}
+.navbar-footer {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+.navbar-footer a {
+  vertical-align: middle;
+  display: inline-block;
+  padding: 5px;
+  color: white;
+}
+
+.navbar-divider {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #435465;
+  z-index: 3;
+}
+.navpage-nav {
+  width: 285px;
+  position: absolute;
+  top: 50px;
+  right: auto;
+  bottom: 0;
+  left: -235px;
+  background-color: #343c47;
+  padding: 30px 0;
+  z-index: 3;
+  transition: all 0.6s ease;
+  will-change: right;
+}
+#nav-icons span {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  color: white;
+}
+
+.navpage-nav ul h2 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.navpage-nav ul li {
+  line-height: 50px;
+  padding-left: 15px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  border-top: 2px solid rgba(225, 225, 225, 0.05);
+}
+.navpage-nav ul li a {
+  display: block;
+  color: white;
+}
+.navpage-nav ul li a:hover .fas {
+  opacity: 1;
+}
+.navpage-nav ul li a .fas {
+  display: block;
+  line-height: 50px;
+  position: absolute;
+  float: right;
+  right: 0;
+  width: 35px;
+  opacity: 0.6;
+}
+.navpage-nav ul li:hover {
+  background-color: #435465;
+}
+.navpage-nav-footer {
+  padding: 20px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.navpage-nav-footer #creditName {
+  float: left;
+  font-weight: 300;
+  color: #647d92;
+}
+.navpage-nav-footer div .fas {
+  float: right;
+  color: #435465;
+  position: absolute;
+  bottom: 32.5px;
+  right: 10px;
+}
+.navpage-nav-footer div .fas:hover {
+  color: white;
+}
+.navpage-main {
+  overflow: auto;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+  background-color: #666666;
+  transition: all 0.6s ease;
+  will-change: left;
+}
+.navpage-main-header {
+  position: fixed;
+  min-width: 365px;
+  left: 50px;
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  color: #444;
+  font-weight: bold;
+  border-bottom: 2px solid #435465;
+  z-index: 2;
+  transition: all 0.6s ease;
+  will-change: left;
+}
+.navpage-main-header div {
+  padding: 15px 5px;
+}
+.pageTitle {
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  left: 5px;
+  top: 5px;
+}
+
+.btnControls {
+  display: inline-flex;
+  float: right;
+}
+.btnControls button {
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 2px;
+  border: 1px solid #cfd1d4;
+  border-radius: 5px;
+  outline: none;
+}
+.save {
+  display: none;
+}
+.btnControls button:nth-child(1) {
+  background-color: #f1f2f3;
+}
+.btnControls button:nth-child(2) {
+  background-color: rgba(154, 226, 86, 0.479);
+}
+.btnControls button:nth-child(3) {
+  background-color: rgba(255, 208, 0, 0.479);
+}
+.btnControls button:nth-child(4) {
+  background-color: rgba(255, 208, 0, 0.479);
+}
+.btnControls button:last-child {
+  background-color: rgba(255, 0, 0, 0.479);
+}
+.btnControls button:hover {
+  text-shadow: 0 0 0.65px rgba(0, 0, 0, 0.65);
+  border: 1px solid #435465;
+  margin-top: -2.5px;
+  height: 35px;
+  box-shadow: 0px 0px 7px rgba(67, 84, 101, 0.3);
+}
+.btnControls button:active {
+  border: 1px solid #435465;
+  height: 35px;
+  box-shadow: inset 0px 0px 5px rgba(68, 68, 68, 0.6);
+}
+.navpage-main-left {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+  min-height: calc(100vh - 110px);
+  background-color: #eee;
+}
+
+.navpage-main-left table thead a {
+  text-decoration: none;
+  color: #435465;
+}
+.navpage-main-left table thead a:hover {
+  color: #273644;
+}
+
+.navpage-main-left table {
+  width: 100%;
+}
+table,
+th,
+td {
+  border-top: 1px solid #cbcbcb;
+  border-collapse: collapse;
+  text-align: center;
+  vertical-align: middle;
+}
+th,
+th,
+td {
+  padding: 10px;
+}
+
+table tr td a {
+  color: #3f5a7a;
+}
+table tr td a:hover {
+  color: #6b819c;
+}
+.notfirst {
+  background-color: #e6e9eb;
+  width: 30px;
+}
+table tr:nth-child(odd) {
+  background-color: #eee;
+}
+table tr:nth-child(even) {
+  background-color: white;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hideBox {
+  border: 1px solid transparent;
+  font-size: 16px;
+  text-align: center;
+  background-color: transparent;
+}
+.rowHover:hover {
+  background-color: #f5f5f5;
+}
+.rowHover:hover .notfirst {
+  background-color: #f5f5f5;
+}
+.checkParent {
+  position: relative;
+}
+.checker {
+  display: inline-block;
+  position: relative;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checker input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checker:hover input ~ .checkmark {
+  border-color: #303a46;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checker input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checker input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checker .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #303a46;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  overflow: scroll;
+}
+.home-content {
+  margin: 15px;
+}
+.home-nav {
+  margin-top: 30px;
+  text-align: center;
+}
+.home-nav .home-nav-btn {
+  display: inline-block;
+  width: 390px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 15px 10px;
+  color: #58585a;
+  background-color: #fefefe;
+  border: 1px solid #c7c7c7;
+}
+.home-nav .home-nav-btn:hover {
+  background-color: #e9e9e9;
+}
+.home-nav .home-nav-btn:hover .home-nav-btn-logo {
+  color: rgb(44, 155, 44);
+}
+.home-nav .home-nav-btn:active {
+  border: 1px solid #929292;
+  background-color: #b4b4b4;
+}
+.home-nav-btn .left {
+  float: left;
+}
+.home-nav-btn .right {
+  float: right;
+  width: 270px;
+  text-align: left;
+  user-select: none;
+}
+.home-nav-btn-logo {
+  margin: 8px 10px;
+  padding: 10px;
+}
+.home-nav-btn-title {
+  font-weight: 500;
+  height: 20px;
+  margin-top: 20px;
+}
+.home-nav-btn-desc {
+  margin-top: 5px;
+  margin-right: 10px;
+  height: 40px;
+}
+.guides {
+  background-color: blue;
+  display: none;
+}
+.contacts {
+  width: 100%;
+  min-width: 1200px;
+  flex-wrap: wrap;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.contacts p {
+  padding: 10px;
+}
+.card .fas {
+  font-size: 20px;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+.card {
+  background-color: #252c35;
+  padding: 0 20px;
+  margin: 20px;
+  width: calc(15% - 20px);
+  height: 200px;
+  display: inline-flex;
+  border-radius: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: #38404d;
+}
+.card:hover .fas {
+  background: none;
+  color: red;
+  transform: scale(1.6);
+}
+
+.issues {
+  display: none;
+  width: 100%;
+  overflow: auto;
+}
+
+tr td .noedit {
+  display: initial;
+}
+
+tr td .edit {
+  display: none;
+}
+
+tr.edit .noedit {
+  display: none;
+}
+
+tr.edit .edit {
+  display: initial;
+}
+
+.white {
+  color: white;
+}
+.red {
+  color: red;
+}
+.cancelOrder {
+  color: red;
+}
+.saveOrder {
+  color: #5bce57;
+}
+table td:nth-child(2) {
+  min-width: 60px;
+}
+
+table td:nth-child(2) a {
+  padding: 5px;
+}
+table td:nth-child(2) a:hover {
+  color: black;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+
+.alert {
+  padding: 21px;
+  background-color: #f43636; /* Red */
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  display: none;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 7;
+}
+.alert.success {
+  background-color: #4caf50;
+}
+.alert.info {
+  background-color: #2196f3;
+}
+.alert.warning {
+  background-color: #ff9800;
+}
+.alert.error {
+  background-color: #f43636;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+.settings {
+  transition: all 0.8s ease;
+}
+.settings:hover {
+  transform: rotate(90deg);
+  color: rgb(255, 136, 0);
+}
+.help:hover {
+  color: rgb(101, 193, 255);
+}
+.comments:hover {
+  color: rgb(96, 255, 96);
+}
+.avatarStatus:hover {
+  opacity: 0.5;
+}
+
+#chat {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#messages {
+  height: 85%;
+  overflow-x: hidden;
+  padding: 10px;
+  background-image: url(https://img.freepik.com/free-vector/retro-styled-pattern-background_1048-6593.jpg);
+}
+#chat form {
+  display: flex;
+}
+#chat form input {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#message {
+  flex: 2;
+}
+.msg {
+  position:relative;
+  background-color: #dcf8c6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+.msg::after{
+  position:absolute;
+  content:'';
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #dcf8c6;
+  bottom:-5px;
+  right:0px;
+}
+.msg p {
+  margin: 0;
+  font-weight: bold;
+}
+.msg span {
+  font-size: 0.7rem;
+  margin-left: 15px;
+}
+
+.msg2 {
+  position: relative;
+  background-color: #c6eaf8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+.msg2::after{
+  position:absolute;
+  content:'';
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #c6eaf8;
+  bottom:-5px;
+  left:0px;
+}
+.msg2 p {
+  margin: 0;
+  font-weight: bold;
+}
+.msg2 span {
+  font-size: 0.7rem;
+  margin-left: 15px;
+}
