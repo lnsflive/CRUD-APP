@@ -19,3 +19,8 @@ A few key features demonstrated in the webapp:
 ## Login Info
 ### Username: test
 ### Password: 123
+
+![Screenshot](https://github.com/lnsflive/CRUD-APP/blob/main/images/ss1.png)
+![Screenshot](https://github.com/lnsflive/CRUD-APP/blob/main/images/ss2.png)
+![Screenshot](https://github.com/lnsflive/CRUD-APP/blob/main/images/ss3.png)
+![Screenshot](https://github.com/lnsflive/CRUD-APP/blob/main/images/ss4.png)
